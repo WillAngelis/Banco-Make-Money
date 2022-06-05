@@ -501,6 +501,7 @@ button {
   }
   nav img {
     width: 60px;
+    margin-left: 0;
   }
   .line {
     right: 0;
