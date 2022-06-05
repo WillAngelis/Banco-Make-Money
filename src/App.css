@@ -1,0 +1,599 @@
+/* Removendo browser defaults */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Style App.js wrapper */
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+/* Pages Container */
+.pages {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background-image: linear-gradient(
+    to right top,
+    #0d0d0d 0%,
+    #141313 92.71%,
+    #111111 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: #e8f0f2;
+}
+
+/* Logo tam */
+nav img {
+  margin-top: 10px;
+  width: 90px;
+  margin-left: 30px;
+}
+
+/* Pages Navigation and Nav */
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+li {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 0;
+  margin: 0 15px;
+  user-select: none;
+}
+li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 75%;
+}
+p {
+  color: white;
+}
+span {
+  color: white;
+  font-weight: 700;
+}
+.card {
+  width: 300px;
+}
+
+.container section div {
+  width: 300px;
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  background: linear-gradient(
+    135deg,
+    #0d0d0dc8 80%,
+    rgba(61, 230, 123, 0.94) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+.container section div::before {
+  content: '';
+  width: 10px;
+  border-radius: 10px;
+  background-color: rgb(61, 230, 123);
+  height: 100px;
+  position: absolute;
+  left: -15px;
+}
+.container section div:nth-child(1) {
+  height: 180px;
+  padding: 20px;
+  width: 350px;
+  font-size: 20px;
+}
+.container section div:nth-child(1)::before {
+  height: 180px;
+}
+.container section div:nth-child(2) {
+  height: 100px;
+  padding: 20px;
+  width: 300px;
+}
+.container section div:nth-child(3)::before {
+  height: 230px;
+}
+.container section div:nth-child(2) p {
+  width: 200px;
+}
+h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.cardHor {
+  width: 300px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+}
+
+.container aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+.container aside div {
+  width: 300px;
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: rgb(6, 6, 6) 0px 20px 30px -10px;
+  background: linear-gradient(
+    135deg,
+    #0d0d0dd3 80%,
+    rgba(27, 27, 27, 0.756) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+.container aside div::before {
+  content: '';
+  width: 10px;
+  border-radius: 10px;
+  background-color: rgb(33, 34, 34);
+  height: 100px;
+  position: absolute;
+  right: -15px;
+}
+.container aside .card {
+  transform: rotate(90deg);
+  margin: 0;
+  margin-bottom: 50px;
+  width: 340px;
+  margin-left: -60px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+}
+
+.container section .platinum {
+  width: 300px;
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #0d0d0dc8 80%, #00c1ca 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+.container section .platinum::before {
+  content: '';
+  width: 10px;
+  border-radius: 10px;
+  background-color: #00c1ca;
+  height: 100px;
+  position: absolute;
+  left: -15px;
+}
+.container section .platinum:nth-child(1) {
+  height: 180px;
+  padding: 20px;
+  width: 350px;
+  font-size: 20px;
+}
+
+.container section .platinum:nth-child(2) {
+  height: 100px;
+  padding: 20px;
+  width: 300px;
+}
+.container section .platinum:nth-child(3)::before {
+  height: 230px;
+}
+.container section .platinum:nth-child(2) p {
+  width: 200px;
+}
+
+.container section .gold {
+  width: 300px;
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #0d0d0dc8 80%, #5271fe 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+.container section .gold::before {
+  content: '';
+  width: 10px;
+  border-radius: 10px;
+  background-color: #5271fe;
+  height: 100px;
+  position: absolute;
+  left: -15px;
+}
+.container section .gold:nth-child(1) {
+  height: 180px;
+  padding: 20px;
+  width: 350px;
+  font-size: 20px;
+}
+
+.container section .gold:nth-child(2) {
+  height: 100px;
+  padding: 20px;
+  width: 300px;
+}
+
+.container section .gold:nth-child(2) p {
+  width: 200px;
+}
+.container section .cardBox {
+  height: fit-content;
+  background: none;
+  box-shadow: none;
+}
+.cards_page {
+  width: 100%;
+}
+.line {
+  height: 100vh;
+  width: 220px;
+  background-color: #3de67b;
+  filter: blur(15px);
+  position: fixed;
+  right: 289px;
+  z-index: 0;
+  top: 0px;
+}
+
+.btn_bottom {
+  color: #fff;
+  margin:20px auto;
+  
+}
+.gold_btn {
+  background-color: #5271fe;
+}
+.platinum_btn {
+  background-color: #00c1ca;
+}
+.black_btn {
+  background-color: #3de67b;
+  color: #0d0d0d;
+}
+button {
+  user-select: none;
+  z-index: 1;
+}
+
+/* Animations */
+.slide-right {
+  -webkit-animation: slide-right 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  animation: slide-right 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+.slide-left {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-6-5 16:48:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0) rotate(90deg);
+    transform: translateX(0) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateX(-400px) rotate(90deg);
+    transform: translateX(-400px) rotate(90deg);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(400px) rotate(90deg);
+    transform: translateX(400px) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px) rotate(90deg);
+    transform: translateX(0px) rotate(90deg);
+  }
+}
+
+.color-change-black {
+  -webkit-animation: color-change-black 0.3s linear alternate forwards;
+  animation: color-change-black 0.3s linear alternate forwards;
+}
+
+@-webkit-keyframes color-change-black {
+  0% {
+    background: #5271fe;
+  }
+  50% {
+    background: #00c1ca;
+  }
+  100% {
+    background: #3de67b;
+  }
+}
+@keyframes color-change-black {
+  0% {
+    background: #5271fe;
+  }
+  50% {
+    background: #00c1ca;
+  }
+  100% {
+    background: #3de67b;
+  }
+}
+
+.color-change-platinum {
+  -webkit-animation: color-change-platinum 0.7s linear alternate forwards;
+  animation: color-change-platinum 0.7s linear alternate forwards;
+}
+
+@-webkit-keyframes color-change-platinum {
+  0% {
+    background: #5271fe;
+  }
+  50% {
+    background: #3de67b;
+  }
+  100% {
+    background: #00c1ca;
+  }
+}
+@keyframes color-change-platinum {
+  0% {
+    background: #5271fe;
+  }
+  50% {
+    background: #3de67b;
+  }
+  100% {
+    background: #00c1ca;
+  }
+}
+
+.color-change-gold {
+  -webkit-animation: color-change-gold 0.3s linear alternate forwards;
+  animation: color-change-gold 0.3s linear alternate forwards;
+}
+
+@-webkit-keyframes color-change-gold {
+  0% {
+    background: #3de67b;
+  }
+  50% {
+    background: #00c1ca;
+  }
+  100% {
+    background: #5271fe;
+  }
+}
+@keyframes color-change-gold {
+  0% {
+    background: #3de67b;
+  }
+  50% {
+    background: #00c1ca;
+  }
+  100% {
+    background: #5271fe;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 720px) {
+  .App {
+    height: fit-content;
+  }
+  nav {
+    justify-content: center;
+    z-index: 1;
+    flex-direction: column;
+  }
+  li {
+    font-size: 16px;
+  }
+  button {
+    margin: 0 auto;
+  }
+  nav img {
+    width: 60px;
+
+    margin-right: 10px;
+  }
+  .line {
+    right: 0;
+    width: 40px;
+    filter: blur(80px);
+    opacity: 1;
+  }
+  p,
+  span {
+    font-size: 14px;
+    text-align: center;
+  }
+  .container section div:nth-child(2) p {
+    width: fit-content;
+  }
+  .container section .platinum:nth-child(2) p {
+    width: fit-content;
+  }
+  .container section .gold:nth-child(2) p {
+    width: fit-content;
+  }
+  h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .container aside .card,
+  .cardHor {
+    width: 250px;
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container section .platinum:nth-child(1) {
+    height: 100px;
+    width: 200px;
+  }
+  .container section .platinum::before {
+    height: 50px;
+  }
+  .container section .gold:nth-child(1) {
+    height: 100px;
+    width: 200px;
+  }
+  .container section .gold::before {
+    height: 50px;
+  }
+  .container section div:nth-child(1) {
+    height: 100px;
+    width: 200px;
+  }
+  .container section div::before {
+    height: 50px;
+  }
+  .container section div:nth-child(1)::before,
+  .container section div:nth-child(2)::before,
+  .container section div:nth-child(3)::before,
+  aside div::before {
+    height: 200px;
+    top: 0px;
+    width: 6px;
+    left: 97px;
+    transform: rotate(90deg);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+  }
+  .container section div:nth-child(2)::before {
+    height: 300px;
+    top: -49px;
+    left: 147px;
+  }
+  .container section .gold:nth-child(3)::before,
+  .container section .platinum:nth-child(3)::before,
+  .container section div:nth-child(3)::before {
+    display: none;
+  }
+
+  .container aside div::before {
+    top: -50px;
+    left: 145px;
+    height: 300px;
+  }
+  .card,
+  .btn_desktop {
+    display: none;
+  }
+}
