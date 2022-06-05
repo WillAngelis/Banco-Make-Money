@@ -320,8 +320,7 @@ h1 {
 
 .btn_bottom {
   color: #fff;
-  margin:20px auto;
-  
+  margin: 20px auto;
 }
 .gold_btn {
   background-color: #5271fe;
@@ -502,8 +501,6 @@ button {
   }
   nav img {
     width: 60px;
-
-    margin-right: 10px;
   }
   .line {
     right: 0;
